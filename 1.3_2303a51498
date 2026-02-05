@@ -1,0 +1,178 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMazsoCXqHrPctZJtnF7wG0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/pragnasahithiuppula2605-afk/ai-assisstant-coading/blob/main/1.3_2303a51498\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6KNezV9i6oQA",
+        "outputId": "b30035f5-40bb-46b3-a0f8-3b9744395e6e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of terms: 3\n",
+            "Fibonacci sequence:\n",
+            "0 1 1 "
+          ]
+        }
+      ],
+      "source": [
+        "n = int(input(\"Enter number of terms: \"))\n",
+        "\n",
+        "a = 0\n",
+        "b = 1\n",
+        "\n",
+        "print(\"Fibonacci sequence:\")\n",
+        "\n",
+        "for i in range(n):\n",
+        "    print(a, end=\" \")\n",
+        "    c = a + b\n",
+        "    a = b\n",
+        "    b = c"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Enter number of terms: \"))\n",
+        "\n",
+        "prev, curr = 0, 1\n",
+        "\n",
+        "print(\"Fibonacci sequence:\")\n",
+        "\n",
+        "for _ in range(n):\n",
+        "    print(prev, end=\" \")\n",
+        "    prev, curr = curr, prev + curr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LftXglBf67XI",
+        "outputId": "36c548a4-8f67-40ad-919e-b7acde9538ea"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of terms: 3\n",
+            "Fibonacci sequence:\n",
+            "0 1 1 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fibonacci(n):\n",
+        "    \"\"\"\n",
+        "    Generates Fibonacci numbers up to n terms.\n",
+        "    \"\"\"\n",
+        "    prev, curr = 0, 1\n",
+        "    for _ in range(n):\n",
+        "        print(prev, end=\" \")\n",
+        "        prev, curr = curr, prev + curr\n",
+        "n = int(input(\"Enter number of terms: \"))\n",
+        "fibonacci(n)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jlJ2_4yX7LZg",
+        "outputId": "621ddddf-7a2b-4fea-9b9c-b313413dea75"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of terms: 4\n",
+            "0 1 1 2 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fib_iter(n):\n",
+        "    prev, curr = 0, 1\n",
+        "\n",
+        "    for _ in range(n):\n",
+        "        print(prev, end=\" \")\n",
+        "        prev, curr = curr, prev + curr"
+      ],
+      "metadata": {
+        "id": "TIrWSgVc7U6c"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fib_rec(n):\n",
+        "    if n <= 1:\n",
+        "        return n\n",
+        "    return fib_rec(n - 1) + fib_rec(n - 2)\n",
+        "n = int(input(\"Enter number of terms: \"))\n",
+        "for i in range(n):\n",
+        "    print(fib_rec(i), end=\" \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2uCMuVyc7iav",
+        "outputId": "a022c9e9-493a-404f-ba57-3971d78211de"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number of terms: 5\n",
+            "0 1 1 2 3 "
+          ]
+        }
+      ]
+    }
+  ]
+}
